@@ -10,9 +10,118 @@
 <body>
   <!-- --- Navigation --- -->
   <nav class="navbar">
-    <a href="index.html" class="navbar-brand">
-      ima
-    </a>
+    <div class="container" navbar-container>
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/img/foodnaija-logo2R.png" alt="App Logo">
+      </a>
+
+      <button class="navbar-toggle" id="navbarToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="navbar-menu" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="navbar-item"><a href="home.html" class="nav-link">Home</a></li>
+          <li class="navbar-item"><a href="menu.html" class="nav-link">Menu</a></li>
+          <li class="navbar-item"><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li class="navbar-item"><a href="cart.html" class="nav-link">Cart</a></li>
+          <li class="navbar-item"><a href="service.html" class="nav-link">Service</a></li>
+          <li class="navbar-item"><a href="profile.html" class="nav-link">Profile</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
+
+  <!-- --- Home Content --- -->
+  <main>
+    <div class="hero">
+      <div class="container">
+        <h1 class="hero-title">Delicious Food Delivered To You</h1>
+        <p class="hero-subtitle">
+          Order from your favorite restaurants and enjoy freshly prepared meals at your doorstep.
+        </p>
+        <a href="menu.html" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2 class="section-title">Popular Categories</h2>
+        <div class="row">
+          <div class="category-container">
+            <div class="category-card active">
+              <div class="category-card-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3>All</h3>
+            </div>
+          </div>
+          <div class="category-container">
+            <div class="category-card active">
+              <div class="category-card-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3>Breakfast</h3>
+            </div>
+          </div>
+          <div class="category-container">
+            <div class="category-card active">
+              <div class="category-card-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3>Lunch</h3>
+            </div>
+          </div>
+          <div class="category-container">
+            <div class="category-card active">
+              <div class="category-card-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3>Dinner</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Items</h2>
+        <div class="food-grid" id="featured Items"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- --- Footer --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="food-content">
+        <div class="footer-section">
+          <h3 class="footer-heading">FoodNaija</h3>
+          <p>Order delicious foo from your favorite restaurants and have it delivered to your doorstep</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, New Block Lagos</li>
+            <li><i class="fas fa-phone"></i> +123-456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@FoodNaija.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2023 FoodNaija. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
