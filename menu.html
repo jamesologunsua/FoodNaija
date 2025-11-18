@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - FoodNaija</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- --- Navigation --- -->
+  <nav class="navbar">
+    <div class="container" navbar-container>
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/img/foodnaija-logo2R.png" alt="App Logo">
+      </a>
+
+      <button class="navbar-toggle" id="navbarToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="navbar-menu" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="navbar-item"><a href="home.html" class="nav-link">Home</a></li>
+          <li class="navbar-item"><a href="menu.html" class="nav-link">Menu</a></li>
+          <li class="navbar-item"><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li class="navbar-item"><a href="cart.html" class="nav-link">Cart</a></li>
+          <li class="navbar-item"><a href="service.html" class="nav-link">Service</a></li>
+          <li class="navbar-item"><a href="profile.html" class="nav-link">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- --- Menu Content --- -->
+  <main>
+    <div class="container">
+      <h1 class="section-title">Our Menu</h1>
+
+      <div class="filter-section">
+        <div class="filter-row">
+          <div class="serch-input">
+            <i class="fas fa-search"></i>
+            <input type="text" class="form-control" id="searchInput" placeholder="Search for food...">
+          </div>
+          <select id="categoryFilter" class="form-control dropdown-select">
+            <option value="all">All</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="desserts">Dessert</option>
+            <option value="drinks">Drinks</option>
+          </select>
+          <select id="sortFilter" class="form-control dropdown-select">
+            <option value="name">Sort by Name</option>
+            <option value="price">Sort by Price</option>
+            <option value="rating">Sort by Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="food-grid" id="menuFoods">
+        <!-- All food items will be displayed here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- --- Footer --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="food-content">
+        <div class="footer-section">
+          <h3 class="footer-heading">FoodNaija</h3>
+          <p>Order delicious foo from your favorite restaurants and have it delivered to your doorstep</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, New Block Lagos</li>
+            <li><i class="fas fa-phone"></i> +123-456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@FoodNaija.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2023 FoodNaija. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
