@@ -11,6 +11,8 @@
   --secondary-color: #4ecdc4;
   --accent-color: #ffd166;
   --dark-color: #2d3047;
+  --fade: #0000007d;
+  --fade-light: #0000000f;
   --light-color: #f7f7f7;
   --gray-color: #8d99ae;
   --success-color: #06d6a0;
@@ -36,3 +38,124 @@ body {
     background-color: var(--light-color);
     line-height: 1.6;
 }
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* --- Form Inputs --- */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- LogIn Page Styling --- */
+
+.login-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+
+  .container {
+    background-color: var(--light-color);
+    box-shadow: var(--shadow-heavy);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+
+  }
+}
+
+.login-page .btn-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3;
+  padding: 20px 30px;
+
+  .btn-block:hover {
+    background-color: var(--primary-dark);
+  }
+
+  .google-btn {
+    background-color: var(--fade-light);
+
+    &:hover {
+      background-color: var(--fade);
+    }
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: var(--dark-color);
+    }
+  
+    .text {
+      padding: 0 5px;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: var(--fade);
+
+    a {
+      text-decoration: none;
+      color: var(--primary-dark);
+    }
+  }
+}
+
+
+
