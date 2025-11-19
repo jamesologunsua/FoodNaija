@@ -167,4 +167,18 @@
   content: "";
   position: absolute;
   bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 }
