@@ -1,16 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodNaija - Order Delicious Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand logo-container">
+                <img src="assets/img/foodnaija-logo.png" alt="FoodNaija Logo">
+            </a>
+            
+            <button class="navbar-toggle" id="navbarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="navbar-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="navbar-item"><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                    <li class="navbar-item"><a href="cart.html" class="nav-link">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li class="navbar-item"><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li class="navbar-item"><a href="service.html" class="nav-link">Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Content -->
+    <main class="page-section">
+        <div class="hero">
+            <div class="container">
+                <h1 class="hero-title">Delicious Food Delivered To You</h1>
+                <p class="hero-subtitle">Order from your favorite restaurants and enjoy freshly prepared meals at your doorstep.</p>
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <h2 class="section-title">Categories</h2>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="category-card active">
+                            <div class="category-card-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3>All</h3>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="category-card">
+                            <div class="category-card-icon">
+                              <i class="fas fa-egg"></i>
+                            </div>
+                            <h3>Breakfast</h3>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="category-card">
+                            <div class="category-card-icon">
+                                <i class="fas fa-hamburger"></i>
+                            </div>
+                            <h3>Lunch</h3>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="category-card">
+                            <div class="category-card-icon">
+                                <i class="fas fa-utensil-spoon"></i>
+                            </div>
+                            <h3>Dinner</h3>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="category-card">
+                            <div class="category-card-icon">
+                                <i class="fas fa-ice-cream"></i>
+                            </div>
+                            <h3>Desserts</h3>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="category-card">
+                            <div class="category-card-icon">
+                                <i class="fas fa-mug-hot"></i>
+                            </div>
+                            <h3>Drinks</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Items</h2>
+                <div class="food-grid" id="featuredFoods">
+                    <!-- Food I will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">FoodNaija</h3>
+                    <p>Order delicious food from your favorite restaurants and have it delivered to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="service.html">Customer Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links">
+                      <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Maryland, Lagos</li>
+                      <li><i class="fas fa-phone"></i> +234 806 373 6269</li> 
+                      <li><i class="fas fa-envelope"></i> info@foodnaija.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <div class="search-input">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary btn-small mt-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodNaija. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodNaija - Order Delicious Food</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+  <div id="navbar"></div>
+  <main id="app"></main>
+  <div id="footer"></div>
   <!-- --- Navigation --- -->
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="container navbar-container">
       <a href="index.html" class="navbar-brand">
         <img src="assets/img/foodnaija-logo2R.png" alt="App Logo">
@@ -31,10 +239,10 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- --- Home Content --- -->
-  <main>
+  <!-- <main>
     <div class="hero">
       <div class="container">
         <h1 class="hero-title">Delicious Food Delivered To You</h1>
@@ -92,12 +300,13 @@
         <div class="food-grid" id="featured Items"></div>
       </div>
     </div>
-  </main>
+  </main> -->
 
   <!-- --- Footer --- -->
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div class="footer-content">
+
         <div class="footer-section">
           <h3 class="footer-heading">FoodNaija</h3>
           <p>Order delicious foo from your favorite restaurants and have it delivered to your doorstep</p>
@@ -107,6 +316,18 @@
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
           </div>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
         </div>
 
         <div class="footer-section">
@@ -123,6 +344,12 @@
         <p>&copy; 2023 FoodNaija. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+  </footer> 
+  <script src="js/script.js"></script>
+  <script src="js/utils/router.js"></script>
+  <script src="js/utils/cart-manager.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/app.js"></script>
 </body>
-</html>
+</html> -->
