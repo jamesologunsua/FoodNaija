@@ -1,0 +1,67 @@
+/* Service Page */
+.service-options {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+margin-bottom: 3rem;
+}
+
+.service-card {
+background-color: white;
+border-radius: var(--border-radius-lg);
+padding: 2rem;
+text-align: center;
+box-shadow: var(--shadow-light);
+transition: all 0.3s ease;
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow-medium);
+}
+
+.service-icon {
+font-size: 3rem;
+color: var(--primary-color);
+margin-bottom: 1rem;
+}
+
+.faq-section {
+background-color: white;
+border-radius: var(--border-radius-lg);
+padding: 2rem;
+box-shadow: var(--shadow-light);
+}
+
+.faq-item {
+margin-bottom: 1.5rem;
+border-bottom: 1px solid #eee;
+padding-bottom: 1.5rem;
+}
+
+.faq-question {
+font-weight: 600;
+font-size: 1.1rem;
+margin-bottom: 0.5rem;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.faq-answer {
+color: var(--gray-color);
+line-height: 1.6;
+}
+
+.contact-form {
+background-color: white;
+border-radius: var(--border-radius-lg);
+padding: 2rem;
+box-shadow: var(--shadow-light);
+}
+
+/* .contact-form .form-control {
+margin-bottom: 1rem;
+}
+.contact-form .btn { */
