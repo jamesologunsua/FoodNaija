@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service - FoodNaija</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/service.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand logo-container">
+                <img src="assets/img/foodnaija-logo.png" alt="FoodNaija Logo">
+            </a>
+            
+            <button class="navbar-toggle" id="navbarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="navbar-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="navbar-item"><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                    <li class="navbar-item"><a href="cart.html" class="nav-link">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li class="navbar-item"><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li class="navbar-item"><a href="service.html" class="nav-link active">Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Content -->
+    <main class="page-section">
+        <div class="container">
+            <h1 class="section-title">Customer Service</h1>
+            
+            <div class="service-options">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQ</h3>
+                    <p>Find answers to frequently asked questions about our service.</p>
+                    <a href="#faq" class="btn btn-primary">View FAQ</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Contact Us</h3>
+                    <p>Get in touch with our customer support team for assistance.</p>
+                    <a href="#contact" class="btn btn-primary">Contact Support</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Delivery Info</h3>
+                    <p>Learn about our delivery areas, times, and fees.</p>
+                    <a href="#delivery" class="btn btn-primary">Delivery Details</a>
+                </div>
+            </div>
+            
+            <div class="faq-section" id="faq">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does delivery take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Delivery times vary depending on your location and restaurant preparation time. Typically, deliveries arrive within 30-45 minutes.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What areas do you deliver to?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We currently deliver within a 10-mile radius of our partner restaurants. You can check if your address is within our delivery area during checkout.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I track my order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Once your order is confirmed, you'll receive a tracking link via SMS or email. You can also track your order in real-time through your profile page.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We accept all major credit cards, debit cards, PayPal, and Apple Pay. Cash on delivery is also available for select restaurants.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I modify or cancel my order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You can modify or cancel your order within 5 minutes of placing it. After that, please contact our customer support team for assistance.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form mt-5" id="contact">
+                <h2 class="section-title">Contact Our Support Team</h2>
+                
+                <form id="supportForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="supportName">Full Name</label>
+                            <input type="text" class="form-control" id="supportName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="supportEmail">Email Address</label>
+                            <input type="email" class="form-control" id="supportEmail" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="supportSubject">Subject</label>
+                        <select class="form-control dropdown-select" id="supportSubject" required>
+                            <option value="">Select a subject</option>
+                            <option value="delivery">Delivery Issue</option>
+                            <option value="order">Order Problem</option>
+                            <option value="payment">Payment Issue</option>
+                            <option value="refund">Refund Request</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="supportMessage">Message</label>
+                        <textarea class="form-control" id="supportMessage" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                
+                <div class="mt-4">
+                    <h3>Other Ways to Reach Us</h3>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h4>Phone Support</h4>
+                                <p>+234 806 373 6269</p>
+                                <p>Mon-Sun: 8AM - 10PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h4>Email Support</h4>
+                                <p>support@foodnaija.com</p>
+                                <p>Response within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h4>Live Chat</h4>
+                                <p>Available on our app</p>
+                                <p>Mon-Sun: 9AM - 9PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">FoodNaija</h3>
+                    <p>Order delicious food from your favorite restaurants and have it delivered to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="service.html">Customer Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Maryland, Lagos</li>
+                        <li><i class="fas fa-phone"></i> +234 806 373 6269</li> 
+                        <li><i class="fas fa-envelope"></i> info@foodnaija.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <div class="search-input">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary btn-small mt-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodNaija. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

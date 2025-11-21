@@ -1,6 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FoodNaija</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/login-signup.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/img/foodnaija-logo.png" alt="FoodNaija Logo">
+            </a>
+        </div>
+    </nav>
+
+    <main class="page-section">
+        <div class="container">
+            <div class="auth-container">
+                <h2 class="auth-title">Welcome Back!</h2>
+                <p class="auth-title">Login to Your Account</p>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label" for="loginEmail">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="loginPassword">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+
+                    <div class="form-group text-right">
+                        <a href="forgot-password.html" class="forgot-password-link">Forgot Password?</a>
+                    </div>
+
+                    <div class="form-row buttons-section" >
+                      <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+                      <div class="divider">
+                        <span>OR</span>
+                      </div>
+
+                      <button class="btn btn-google btn-block">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                      </button>
+                    </div>
+                </form>
+
+                <div class="auth-switch">
+                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">FoodNaija</h3>
+                    <p>Order delicious food from your favorite restaurants and have it delivered to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="service.html">Customer Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Maryland, Lagos</li>
+                        <li><i class="fas fa-phone"></i> +234 806 373 6269</li> 
+                        <li><i class="fas fa-envelope"></i> info@foodnaija.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodNaija. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - FoodNaija</title>
@@ -45,11 +190,9 @@
             <p>Don't have an account? <a href="signup.html">Sign up</a></p>
           </div>
         </form>
-      <!--  <div class="auth-switch">
-          <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-        </div> -->
+      
       </div>
     </div>
   </div>
 </body>
-</html>
+</html> -->
