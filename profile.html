@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Foodie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/profile.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand logo-container">
+                <img src="assets/img/foodnaija-logo.png" alt="FoodNaija Logo">
+            </a>
+            
+            <button class="navbar-toggle" id="navbarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="navbar-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="navbar-item"><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                    <li class="navbar-item"><a href="cart.html" class="nav-link">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li class="navbar-item"><a href="profile.html" class="nav-link active">Profile</a></li>
+                    <li class="navbar-item"><a href="service.html" class="nav-link">Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <main class="page-section">
+        <div class="container">
+            <h1 class="section-title">My Profile</h1>
+            
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <img src="assets/img/profile-picture-placeholder.jpg" alt="User Avatar">
+                    </div>
+                    <h3 class="text-center">John Doe</h3>
+                    <p class="text-center text-muted">john@foodnaija.com</p>
+                    
+                    <div class="profile-nav">
+                        <div class="profile-nav-item active" data-section="personal">Personal Information</div>
+                        <div class="profile-nav-item" data-section="orders">Order History</div>
+                        <div class="profile-nav-item" data-section="addresses">Saved Addresses</div>
+                        <div class="profile-nav-item" data-section="payment">Payment Methods</div>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-section active" id="personal-section">
+                        <h3>Personal Information</h3>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="profileFirstName">First Name</label>
+                                    <input type="text" class="form-control" id="profileFirstName" value="John">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="profileLastName">Last Name</label>
+                                    <input type="text" class="form-control" id="profileLastName" value="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="profileEmail">Email</label>
+                                <input type="email" class="form-control" id="profileEmail" value="john.doe@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="profilePhone">Phone Number</label>
+                                <input type="tel" class="form-control" id="profilePhone" value="+1 (555) 123-4567">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                    
+                    <div class="profile-section" id="orders-section">
+                        <h3>Order History</h3>
+                        <div class="order-history">
+                            <div class="order-history-item">
+                                <div class="order-header">
+                                    <div>
+                                        <h4>Order #12345</h4>
+                                        <p>June 15, 2023</p>
+                                    </div>
+                                    <div class="order-status status-delivered">Delivered</div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <span>Ofada rice with assorted ofada sauce and diced plantain</span>
+                                        <span>$200.00</span>
+                                    </div>
+                                    <div class="order-item">
+                                        <span>Stewed beans, saki, ponmo with fried plantain</span>
+                                        <span>$200.99</span>
+                                    </div>
+                                </div>
+                                <div class="order-total">$400.99</div>
+                            </div>
+                            
+                            <div class="order-history-item">
+                                <div class="order-header">
+                                    <div>
+                                        <h4>Order #12344</h4>
+                                        <p>June 10, 2023</p>
+                                    </div>
+                                    <div class="order-status status-pending">In Progress</div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <span>Unripe plantain, sauce and fried fish</span>
+                                        <span>$100.99</span>
+                                    </div>
+                                    <div class="order-item">
+                                        <span>French Fries</span>
+                                        <span>$20.99</span>
+                                    </div>
+                                    <div class="order-item">
+                                        <span>Cola</span>
+                                        <span>$2.49</span>
+                                    </div>
+                                </div>
+                                <div class="order-total">$124.47</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section" id="addresses-section">
+                        <h3>Saved Addresses</h3>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="address-card">
+                                    <h4>Home</h4>
+                                    <p>123 Main Street</p>
+                                    <p>New Town, Lagos 11101</p>
+                                    <p>Nigeria</p>
+                                    <button class="btn btn-secondary btn-small mt-2">Edit</button>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="address-card">
+                                    <h4>Work</h4>
+                                    <p>456 Main Road</p>
+                                    <p>New Town, Lagos 11102</p>
+                                    <p>Nigeria</p>
+                                    <button class="btn btn-secondary btn-small mt-2">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-3">Add New Address</button>
+                    </div>
+                    
+                    <div class="profile-section" id="payment-section">
+                        <h3>Payment Methods</h3>
+                        <div class="payment-method">
+                            <div class="payment-card">
+                                <div class="payment-card-info">
+                                    <i class="fab fa-cc-visa fa-2x"></i>
+                                    <div>
+                                        <h4>Visa ending in 1234</h4>
+                                        <p>Expires 05/25</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary btn-small">Edit</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-3">Add New Payment Method</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">FoodNaija</h3>
+                    <p>Order delicious food from your favorite restaurants and have it delivered to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="service.html">Customer Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Maryland, Lagos</li>
+                        <li><i class="fas fa-phone"></i> +234 806 373 6269</li> 
+                        <li><i class="fas fa-envelope"></i> info@foodnaija.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <div class="search-input">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary btn-small mt-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodNaija. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    
+
+</body>
+</html>
