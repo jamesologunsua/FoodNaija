@@ -115,5 +115,25 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const signupForm = document.getElementById('signupForm');
+        
+            if (signupForm) {
+                signupForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const password = document.getElementById('signupPassword').value;
+                    const confirmPassword = document.getElementById('signupConfirmPassword').value;
+                
+                    if (password !== confirmPassword) {
+                        alert('Passwords do not match!');
+                        return;
+                    }
+                    alert('Account created successfully!');
+                    window.location.href = 'login.html';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

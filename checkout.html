@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Foodie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand logo-container">
+                <img src="assets/img/foodnaija-logo.png" alt="FoodNaija Logo">
+            </a>
+            
+            <button class="navbar-toggle" id="navbarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="navbar-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="navbar-item"><a href="restaurants.html" class="nav-link active">Restaurants</a></li>
+                    <li class="navbar-item"><a href="cart.html" class="nav-link">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li class="navbar-item"><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li class="navbar-item"><a href="service.html" class="nav-link">Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Checkout Content -->
+    <main class="page-section">
+        <div class="container">
+            <h1 class="section-title">Checkout</h1>
+            
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <h3>Delivery Information</h3>
+                    <form id="checkoutForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="address">Delivery Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Street address" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="city">City</label>
+                                <input type="text" class="form-control" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="zipCode">ZIP Code</label>
+                                <input type="text" class="form-control" id="zipCode" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="deliveryInstructions">Delivery Instructions (Optional)</label>
+                            <textarea class="form-control" id="deliveryInstructions" rows="3" placeholder="e.g., Leave at front door, ring bell, etc."></textarea>
+                        </div>
+                        
+                        <h3 class="mt-4">Payment Information</h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="cardNumber">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="expiryDate">Expiry Date</label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="cvv">CVV</label>
+                                <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="cardName">Name on Card</label>
+                            <input type="text" class="form-control" id="cardName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-check">
+                                <input type="checkbox" id="savePayment" class="form-check-input">
+                                <span class="form-check-label">Save payment method for future orders</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Place Order</button>
+                    </form>
+                </div>
+                
+                <div class="checkout-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkoutItems">
+                        <!-- Checkout items will be loaded here by JavaScript -->
+                    </div>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="checkoutSubtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span id="checkoutDeliveryFee">$2.99</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span id="checkoutTax">$0.00</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span id="checkoutTotal">$0.00</span>
+                    </div>
+
+                    <div class="delivery-time mt-4">
+                        <h4>Estimated Delivery Time</h4>
+                        <p><i class="fas fa-clock"></i> 25-35 minutes</p>
+                    </div>
+
+                    <div class="support-info mt-4">
+                        <h4>Need Help?</h4>
+                        <p><i class="fas fa-phone"></i> Call us: +1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">FoodNaija</h3>
+                    <p>Order delicious food from your favorite restaurants and have it delivered to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="service.html">Customer Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Maryland, Lagos</li>
+                        <li><i class="fas fa-phone"></i> +234 806 373 6269</li> 
+                        <li><i class="fas fa-envelope"></i> info@foodnaija.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <div class="search-input">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary btn-small mt-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodNaija. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkoutForm = document.getElementById('checkoutForm');
+            const checkoutItems = document.getElementById('checkoutItems');
+            
+            // Load cart items and calculate totals
+            function loadCheckoutSummary() {
+                const cartManager = window.cartManager;
+                
+                if (!cartManager || cartManager.cart.length === 0) {
+                    checkoutItems.innerHTML = '<p>Your cart is empty</p>';
+                    updateCheckoutTotals(0);
+                    return;
+                }
+                
+                
+                checkoutItems.innerHTML = cartManager.cart.map(item => `
+                    <div class="order-item">
+                        <span>${item.name} x ${item.quantity}</span>
+                        <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                `).join('');
+                
+                // Calculate and update totals
+                const subtotal = cartManager.getSubtotal();
+                updateCheckoutTotals(subtotal);
+            }
+            
+            function updateCheckoutTotals(subtotal) {
+                const deliveryFee = 2.99;
+                const tax = subtotal * 0.08; 
+                const total = subtotal + deliveryFee + tax;
+                
+                document.getElementById('checkoutSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+                document.getElementById('checkoutTax').textContent = `$${tax.toFixed(2)}`;
+                document.getElementById('checkoutTotal').textContent = `$${total.toFixed(2)}`;
+            }
+            
+            // Form submission
+            if (checkoutForm) {
+                checkoutForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const cartManager = window.cartManager;
+                    if (!cartManager || cartManager.cart.length === 0) {
+                        alert('Your cart is empty!');
+                        return;
+                    }
+                    
+                    
+                    // Get form data
+                    const formData = {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        address: document.getElementById('address').value,
+                        total: document.getElementById('checkoutTotal').textContent
+                    };
+                    
+                    // Show success message
+                    alert(`Order placed successfully!\n\nThank you ${formData.firstName}! Your order total is ${formData.total} and will be delivered to ${formData.address}.\n\nA confirmation email has been sent to ${formData.email}.`);
+                    
+                    // Clear the cart
+                    cartManager.cart = [];
+                    cartManager.saveCart();
+                    cartManager.updateCartCount();
+                    
+                    // Redirect to home page
+                    window.location.href = 'index.html';
+                });
+            }
+            
+            // Format card number input
+            const cardNumberInput = document.getElementById('cardNumber');
+            if (cardNumberInput) {
+                cardNumberInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                    let matches = value.match(/\d{4,16}/g);
+                    let match = matches && matches[0] || '';
+                    let parts = [];
+                    
+                    for (let i = 0; i < match.length; i += 4) {
+                        parts.push(match.substring(i, i + 4));
+                    }
+                    
+                    if (parts.length) {
+                        e.target.value = parts.join(' ');
+                    } else {
+                        e.target.value = value;
+                    }
+                });
+            }
+            
+            // Format expiry date input
+            const expiryInput = document.getElementById('expiryDate');
+            if (expiryInput) {
+                expiryInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length >= 2) {
+                        e.target.value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                    }
+                });
+            }
+            
+            // Load initial checkout summary
+            loadCheckoutSummary();
+        });
+    </script>
+</body>
+</html>

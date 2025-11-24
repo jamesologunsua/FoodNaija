@@ -103,6 +103,21 @@
     </footer>
 
     <script src="js/app.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+        
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+
+                    alert('Login successful!');
+                    window.location.href = 'index.html';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 
