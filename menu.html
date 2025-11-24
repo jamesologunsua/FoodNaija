@@ -118,5 +118,53 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script>
+    // Menu page specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuContainer = document.getElementById('menuFoods');
+      const searchInput = document.getElementById('searchInput');
+      const categoryFilter = document.getElementById('categoryFilter');
+      const sortFilter = document.getElementById('sortFilter');
+    
+      // Load all foods initially
+      renderFoods(foodData);
+     
+      // Filter functionality
+      function filterFoods() {
+          const searchTerm = searchInput.value.toLowerCase();
+          const category = categoryFilter.value;
+          const sortBy = sortFilter.value;
+        
+          let filtered = foodData.filter(food => {
+              const matchesSearch = food.name.toLowerCase().includes(searchTerm) || food.description.toLowerCase().includes(searchTerm);
+              const matchesCategory = category === 'all' || food.category === category;
+            
+              return matchesSearch && matchesCategory;
+          });
+        
+          // Sort
+          if (sortBy === 'name') {
+              filtered.sort((a, b) => a.name.localeCompare(b.name));
+          } else if (sortBy === 'price') {
+              filtered.sort((a, b) => a.price - b.price);
+          } else if (sortBy === 'rating') {
+              filtered.sort((a, b) => b.rating - a.rating);
+          }
+        
+          renderFoods(filtered);
+      }
+    
+      function renderFoods(foods) {
+          menuContainer.innerHTML = foods.map(food =>
+              window.cartManager.renderFoodCard(food)
+          ).join('');
+      }
+    
+      // Event listeners for filters
+      searchInput.addEventListener('input', filterFoods);
+      categoryFilter.addEventListener('change', filterFoods);
+      sortFilter.addEventListener('change', filterFoods);
+  });
+</script>
 </body>
 </html>

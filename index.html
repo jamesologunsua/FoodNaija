@@ -139,9 +139,9 @@
                 <div class="footer-section">
                     <h3 class="footer-heading">Contact Us</h3>
                     <ul class="footer-links">
-                      <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Maryland, Lagos</li>
-                      <li><i class="fas fa-phone"></i> +234 806 373 6269</li> 
-                      <li><i class="fas fa-envelope"></i> info@foodnaija.com</li>
+						<li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Maryland, Lagos</li>
+						<li><i class="fas fa-phone"></i> +234 806 373 6269</li> 
+						<li><i class="fas fa-envelope"></i> info@foodnaija.com</li>
                     </ul>
                 </div>
                 
@@ -162,6 +162,34 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script>
+		document.addEventListener('DOMContentLoaded', function() {
+			
+			const featuredFoods = foodData.filter(food => food.featured);
+			console.log(featuredFoods);
+			const container = document.getElementById('featuredFoods');
+			
+			if (container) {
+				container.innerHTML = featuredFoods.map(food =>
+					window.cartManager.renderFoodCard(food)
+				).join('');
+			}
+			
+			// Category filtering (simple implementation)
+			/* document.querySelectorAll('.category-card').forEach(card => {
+				card.addEventListener('click', function() {
+					document.querySelectorAll('.category-card').forEach(c =>
+						c.classList.remove('active')
+					);
+					this.classList.add('active');
+					
+					
+					const category = this.querySelector('h3').textContent.toLowerCase();
+					alert(`Filtering by: ${category}`);
+				});
+			}); */
+		});
+  </script>
 </body>
 </html>
 
