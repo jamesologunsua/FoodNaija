@@ -165,7 +165,8 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-<strong>Development Guidelines</strong>
+<strong>Development Guidelines</strong> 
+
 Follow mobile-first responsive design
 
 Use semantic HTML5 elements
