@@ -102,7 +102,7 @@ font-weight: 600;
 
 
 
-/* 
+
 .success-message {
 background-color: #e6f7f0;
 color: var(--success-color);
@@ -115,4 +115,4 @@ display: none;
 .success-message.active {
 display: block;
 animation: slideIn 0.5s ease;
-} */
+} 

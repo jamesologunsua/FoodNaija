@@ -102,7 +102,7 @@ class CartManager {
 
 
         const existingItem = this.cart.find(item => item.id === itemId);
-      
+    
         if (existingItem) {
             existingItem.quantity += quantity;
         } else {
@@ -114,7 +114,7 @@ class CartManager {
                 quantity: quantity
             });
         }
-      
+    
         this.saveCart();
         this.updateCartCount();
         this.showSuccessMessage(`${food.name} added to cart!`);
@@ -131,10 +131,10 @@ class CartManager {
 
     updateQuantity(itemId, change) {
         const item = this.cart.find(item => item.id === itemId);
-      
+    
         if (item) {
             item.quantity += change;
-          
+        
             if (item.quantity <= 0) {
                 this.removeItem(itemId);
             } else {
@@ -175,10 +175,10 @@ class CartManager {
             successMessage.className = 'success-message';
             document.body.appendChild(successMessage);
         }
-       
+    
         successMessage.textContent = message;
         successMessage.classList.add('active');
-       
+    
         setTimeout(() => {
             successMessage.classList.remove('active');
         }, 3000);

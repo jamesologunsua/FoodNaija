@@ -256,6 +256,25 @@ background-position: right 16px center;
 padding-right: 45px;
 }
 
+    .success-message {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #e6f7f0;
+        color: var(--success-color);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        z-index: 9999;
+        display: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+
+    .success-message.active {
+    display: block;
+    animation: slideIn 0.5s ease;
+    } 
+
 /* --- ANIMATIONS --- */
 @keyframes fadeIn {
     from { opacity: 0; }
