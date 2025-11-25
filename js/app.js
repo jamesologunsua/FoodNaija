@@ -2,9 +2,9 @@ const foodData = [
     {
         id: 1,
         name: "Pounded Yam with Egusi Soup",
-        description: "Egusi soup and pounded yam",
+        description: "Egusi soup and pounded yam with assorted meat",
         price: 12.99,
-        image: "https://media.istockphoto.com/id/498310978/photo/egusi-soup-and-pounded-yam-nigerian-cuisine.jpg?s=612x612&w=0&k=20&c=7TmkO_7Nx12PpXqWQpPUUWEuxjY6qX4ITdBVBFxfHuA=",
+        image: "https://lh3.googleusercontent.com/ci/AL18g_SzYnlq9XndmWU6EV_3BMsohS7hNLI0jZuGuGcZWNFaMHA9eAe5NF3i_Feu26y2rcXwxjHNyA=s1200",
         category: "dinner",
         rating: 4.5,
         featured: true
@@ -78,6 +78,26 @@ const foodData = [
         category: "drink",
         rating: 4.3,
         featured: false
+    },
+    {
+        id: 9,
+        name: "Refreshing Zobo Drink",
+        description: "Refreshing zobo drink made from hibiscus petals with ginger and pineapple",
+        price: 3.99,
+        image: "https://t4.ftcdn.net/jpg/15/24/96/85/240_F_1524968570_JyTon3h49Pw985rN7sODcIMUBrSGY8vH.jpg",
+        category: "drink",
+        rating: 4.3,
+        featured: false
+    },
+    {
+        id: 10,
+        name: "Pepperoni Pizza",
+        description: "It has ham, Italian sausage, beef, and pizza cheese made with 100 percent real mozzarella cheese",
+        price: 3.99,
+        image: "https://media.istockphoto.com/id/521403691/photo/hot-homemade-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=PaISuuHcJWTEVoDKNnxaHy7L2BTUkyYZ06hYgzXmTbo=",
+        category: "lunch",
+        rating: 4.3,
+        featured: true
     }
 ];
 
@@ -218,16 +238,16 @@ class CartManager {
 
 document.addEventListener('DOMContentLoaded', function() {
     window.cartManager = new CartManager();
-  
+
     const navbarToggle = document.getElementById('navbarToggle');
     const navbarMenu = document.getElementById('navbarMenu');
-  
+
     if (navbarToggle && navbarMenu) {
         navbarToggle.addEventListener('click', function() {
             navbarMenu.classList.toggle('active');
         });
     }
-  
+
     document.querySelectorAll('.navbar-nav a').forEach(link => {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
