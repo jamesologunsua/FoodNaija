@@ -1,4 +1,4 @@
-FoodNaija - Food Delivery App 
+<strong>FoodNaija - Food Delivery App </strong> <br>
 A complete food ordering application built with HTML, CSS, and JavaScript that provides a seamless food delivery experience.
 
 📱 Live Demo
@@ -18,7 +18,7 @@ User Profiles - Personal accounts with order history
 
 Responsive Design - Flawless experience on all devices
 
-🎯 Advanced Features
+<strong>🎯 Advanced Features</strong> <br>
 Real-time Cart Updates - Instant cart calculations
 
 Local Storage - Persistent cart between sessions
@@ -29,7 +29,7 @@ Fast Performance - Lightweight and fast loading
 
 Accessibility - WCAG compliant design
 
-🏗️ Project Structure
+<strong>🏗️ Project Structure</strong><br>
 text
 foodnaija-app/
 ├── index.html              # Homepage
@@ -51,13 +51,13 @@ foodnaija-app/
 │   └── auth.js             # User authentication
 ├── images/                 # All images and icons
 └── assets/                 # Additional assets
-🚀 Quick Start
+<strong>🚀 Quick Start</strong><br>
 Prerequisites
 Modern web browser (Chrome, Firefox, Safari, Edge)
 
 Local server (for development)
 
-Installation
+<strong>Installation</strong><br>
 Clone the repository
 
 bash
@@ -82,7 +82,7 @@ Access the application
 
 Open http://localhost:8000 in your browser
 
-💻 Technologies Used
+<strong>💻 Technologies Used<strong><br>
 Frontend: HTML5, CSS3, JavaScript (ES6+)
 
 Styling: CSS Grid, Flexbox, CSS Variables
@@ -93,7 +93,7 @@ Icons: Custom SVG icons
 
 Fonts: Google Fonts (Montserrat, Open Sans)
 
-🎨 Design System
+<strong>🎨 Design System<strong><br>
 Color Palette
 css
 --primary-color: #ff6b6b;     /* Brand red */
@@ -108,7 +108,7 @@ Body: Open Sans (Regular, Light)
 
 Code: Fira Code (Monospace)
 
-🔧 Key Features Explained
+<strong>🔧 Key Features Explained</strong><br>
 Cart Management
 javascript
 class CartManager {
@@ -144,7 +144,7 @@ Session management for user preferences
 
 Offline capability for basic functionality
 
-📱 Browser Support
+<strong>📱 Browser Support</strong><br>
 Browser	Version	Support
 Chrome	60+	✅ Full
 Firefox	55+	✅ Full
@@ -152,7 +152,7 @@ Safari	12+	✅ Full
 Edge	79+	✅ Full
 Mobile Safari	12+	✅ Full
 Chrome Mobile	60+	✅ Full
-🤝 Contributing
+<strong>🤝 Contributing</strong><br>
 We welcome contributions! Please follow these steps:
 
 Fork the project
@@ -165,8 +165,7 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-<strong>Development Guidelines</strong> 
-
+<strong>Development Guidelines</strong><br>
 Follow mobile-first responsive design
 
 Use semantic HTML5 elements
@@ -177,7 +176,7 @@ Write clean, documented JavaScript
 
 Test across multiple browsers
 
-🐛 Bug Reports
+<strong>🐛 Bug Reports</strong><br>
 If you discover any bugs, please create an issue with:
 
 Browser and version
@@ -188,7 +187,7 @@ Expected vs actual behavior
 
 Screenshots if applicable
 
-📋 TODO & Roadmap
+<strong>📋 TODO & Roadmap</strong><br>
 Short Term
 User authentication system
 
@@ -217,7 +216,7 @@ AI recommendations
 Multi-vendor support
 
 
-📊 SEO Optimization
+<strong>📊 SEO Optimization</strong><br>
 Semantic HTML structure
 
 Meta tags and descriptions
@@ -228,7 +227,7 @@ Clean URL structure
 
 Fast loading times
 
-👥 Team
+<strong>👥 Team</strong><br>
 This project was developed by a team of 5 developers:
 Ayomide Ologunsua
 Sunday Olawumi Oladele
@@ -237,7 +236,7 @@ Ekpe Lillian Francis
 Abraham Lawal
 
 
-🙏 Acknowledgments
+<strong>🙏 Acknowledgments</strong><br>
 Icons from Font Awesome
 
 Fonts from Google Fonts
