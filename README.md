@@ -2,7 +2,7 @@ FoodNaija - Food Delivery App
 A complete food ordering application built with HTML, CSS, and JavaScript that provides a seamless food delivery experience.
 
 📱 Live Demo
-View Live Application
+View Live Application: https://jamesologunsua.github.io/FoodNaija/
 
 ✨ Features
  Core Features
@@ -165,7 +165,7 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-Development Guidelines
+<strong>Development Guidelines</strong>
 Follow mobile-first responsive design
 
 Use semantic HTML5 elements
@@ -236,9 +236,6 @@ Ekpe Lillian Francis
 Abraham Lawal
 
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
 🙏 Acknowledgments
 Icons from Font Awesome
 
@@ -249,7 +246,7 @@ Inspiration from modern food delivery apps
 Our amazing beta testers and users
 
 📞 Support
-For support, email support@foodnaija.com or join our Slack channel.
+For support, email jamesologunsua@gmail.com.
 
 <div align="center">
 Made with ❤️ by the FoodNaija Labs Team
